@@ -1,0 +1,91 @@
+{
+    "id": "102080320",
+    "premium": false,
+    "name": "Слесарь-сборщик",
+    "department": null,
+    "has_test": false,
+    "response_letter_required": false,
+    "area": {
+        "id": "72",
+        "name": "Пермь",
+        "url": "https://api.hh.ru/areas/72"
+    },
+    "salary": {
+        "from": 50000,
+        "to": null,
+        "currency": "RUR",
+        "gross": false
+    },
+    "type": {
+        "id": "open",
+        "name": "Открытая"
+    },
+    "address": {
+        "city": "Пермь",
+        "street": "улица Энергетиков",
+        "building": "39",
+        "lat": 57.95994976814507,
+        "lng": 56.155909382939804,
+        "description": null,
+        "raw": "Пермь, улица Энергетиков, 39",
+        "metro": null,
+        "metro_stations": [],
+        "id": "6951557"
+    },
+    "response_url": null,
+    "sort_point_distance": null,
+    "published_at": "2024-06-17T11:10:29+0300",
+    "created_at": "2024-06-17T11:10:29+0300",
+    "archived": false,
+    "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=102080320",
+    "show_logo_in_search": null,
+    "insider_interview": null,
+    "url": "https://api.hh.ru/vacancies/102080320?host=hh.ru",
+    "alternate_url": "https://hh.ru/vacancy/102080320",
+    "relations": [],
+    "employer": {
+        "id": "2086971",
+        "name": "ПЗЭО Кама",
+        "url": "https://api.hh.ru/employers/2086971",
+        "alternate_url": "https://hh.ru/employer/2086971",
+        "logo_urls": {
+            "original": "https://img.hhcdn.ru/employer-logo-original/825435.png",
+            "90": "https://img.hhcdn.ru/employer-logo/3742627.png",
+            "240": "https://img.hhcdn.ru/employer-logo/3742628.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2086971",
+        "accredited_it_employer": false,
+        "trusted": true
+    },
+    "snippet": {
+        "requirement": "Средне-специальное образование. Ответственность.",
+        "responsibility": "Монтаж оборудования, слесарные работы. Обработка шин медь, алюминий."
+    },
+    "contacts": null,
+    "schedule": {
+        "id": "fullDay",
+        "name": "Полный день"
+    },
+    "working_days": [],
+    "working_time_intervals": [],
+    "working_time_modes": [],
+    "accept_temporary": false,
+    "professional_roles": [
+        {
+            "id": "102",
+            "name": "Разнорабочий"
+        }
+    ],
+    "accept_incomplete_resumes": false,
+    "experience": {
+        "id": "noExperience",
+        "name": "Нет опыта"
+    },
+    "employment": {
+        "id": "full",
+        "name": "Полная занятость"
+    },
+    "adv_response_url": null,
+    "is_adv_vacancy": false,
+    "adv_context": null
+}
