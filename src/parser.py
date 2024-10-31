@@ -1,41 +1,39 @@
 from abc import ABC, abstractmethod
-
 import requests
 
-
 class Parser(ABC):
+    """Абстрактный класс для загрузки данных с API."""
+
     @abstractmethod
     def load_vacancies(self):
+        """Загрузка списка вакансий."""
         pass
 
-
 class HH(Parser):
-    """
-    Класс для работы с API HeadHunter
-    Класс Parser является родительским классом, который вам необходимо реализовать
-    """
+    """Класс для работы с API HeadHunter."""
 
     def __init__(self, keyword):
+        """Инициализация с указанием ключевого слова для поиска вакансий.
 
-        self.url = 'https://api.hh.ru/vacancies'
-        self.headers = {'User-Agent': 'HH-User-Agent'}
+        Args:
+            keyword (str): Ключевое слово для поиска.
+        """
+        self._url = 'https://api.hh.ru/vacancies'  # Приватный атрибут URL
+        self._headers = {'User-Agent': 'HH-User-Agent'}  # Приватный атрибут headers
         self.params = {'text': keyword, 'page': 0, 'per_page': 100}
 
-
     def load_vacancies(self):
+        """Загрузка вакансий с использованием API HH.
+
+        Returns:
+            list: Список вакансий.
+        """
         vacancies = []
-
-        while self.params.get('page') != 1:
-            response = requests.get(self.url, headers=self.headers, params=self.params)
-            vacancies = response.json()['items']
-            vacancies.extend(vacancies)
+        while True:
+            response = requests.get(self._url, headers=self._headers, params=self.params)
+            page_data = response.json().get('items', [])
+            vacancies.extend(page_data)
+            if not page_data:
+                break
             self.params['page'] += 1
-
         return vacancies
-
-# if __name__ == "__main__":
-#     hh = HH("курьер")
-#     res = hh.load_vacancies()
-#     for i in res:
-#         print(i["id"], i["salary"])
-    #print(res)
